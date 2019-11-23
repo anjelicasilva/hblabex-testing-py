@@ -8,7 +8,12 @@ app.secret_key = "SECRETSECRETSECRET"
 
 
 def is_mel(name, email):
-    """Is this user Mel?"""
+    """Is this user Mel?
+    >>> is_mel('Mel Melitpolski', 'mel@ubermelon.com')
+    True
+    >>> is_mel('Judith', 'judith@awesome.com')
+    False
+    """
 
     return name == "Mel Melitpolski" or email == "mel@ubermelon.com"
 
@@ -78,6 +83,9 @@ def get_treats():
 @app.route("/")
 def homepage():
     """Show homepage."""
+
+    print("look here")
+    print(session)
 
     return render_template("homepage.html")
 
