@@ -11,6 +11,10 @@ def is_mel(name, email):
     """Is this user Mel?
     >>> is_mel('Mel Melitpolski', 'mel@ubermelon.com')
     True
+    >>> is_mel('Mel Melitpolski', 'test@gmail.com')
+    True
+    >>> is_mel('Judith', 'mel@ubermelon.com')
+    True
     >>> is_mel('Judith', 'judith@awesome.com')
     False
     """
